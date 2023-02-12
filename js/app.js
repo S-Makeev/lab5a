@@ -5,15 +5,15 @@ Write a function called sum() that takes in two numbers as arguments and then re
 
 "The sum of 4 and 7 is 11."
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
+// Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
-// // Write your code here
-function sum(a, b) { //eslint-disable-line
-  let mySum = a + b;
-  let myString = `The sum of ${a} and ${b} is ${mySum}.`;
+// // // Write your code here
+// function sum(a, b) { //eslint-disable-line
+//   let mySum = a + b;
+//   let myString = `The sum of ${a} and ${b} is ${mySum}.`;
 
-  return [mySum, myString];
-}
+//   return [mySum, myString];
+// }
 
 // // //Here is the test for sum(); uncomment it to run it
 // // testSum(4, 7);
@@ -29,13 +29,13 @@ function sum(a, b) { //eslint-disable-line
 // Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // // Write your code here
-// function multiply(a, b) { //eslint-disable-line
-//   let myProd = a * b;
-//   let myString = `The product of ${a} and ${b} is ${myProd}.`;
+function multiply(a, b) { //eslint-disable-line
+  let myProd = a * b;
+  let myString = `The product of ${a} and ${b} is ${myProd}.`;
 
-//   return [myProd, myString];
+  return [myProd, myString];
 
-// }
+}
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -89,32 +89,32 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
-// Write your code here
+// // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+// function sumArray(sumArr) { //eslint-disable-line
 
 
-  let firstSum = sum(testArray[0], testArray[1]);
+//   let firstSum = sum(testArray[0], testArray[1]);
 
-  let finalSum = sum(firstSum[0], testArray[2]);
-  let finalString = `${testArray} was passed in as an array of numbers, and ${finalSum[0]} is their sum.`;
+//   let finalSum = sum(firstSum[0], testArray[2]);
+//   let finalString = `${testArray} was passed in as an array of numbers, and ${finalSum[0]} is their sum.`;
 
-  return [finalSum[0], finalString];
-
-
-}
+//   return [finalSum[0], finalString];
 
 
-// Here is the test for sumArray(); uncomment it to run it
+// }
 
- testSumArray(testArray);
+
+// // Here is the test for sumArray(); uncomment it to run it
+
+//  testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and zuses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
@@ -125,10 +125,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  let firstProd = multiply(testArray[0], testArray[1]);
+
+  let finalProd = multiply(firstProd[0], testArray[2]);
+  let finalString = `The numbers ${testArray} have a product of ${finalProd[0]}.`;
+
+  return [finalProd[0], finalString];
+
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
